@@ -63,3 +63,11 @@ print(S)
 std_errors <- sqrt(diag(solve(fit$hessian)))
 print(std_errors)
 
+# Add values from lm
+model <- lm(y ~ x1 + x2 + x3, df)
+
+# Beta estimates
+print(model$coefficients)
+
+# Sigma estimate
+print(summary(model)$sigma)
